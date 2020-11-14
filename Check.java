@@ -2,11 +2,13 @@ class Check
 {
     String yourMove = Play.yourMove;
 
+    //TIE
     if (yourMove.equals(compMove))
     {
         System.out.println("Bruh we chose the same, stop reading my mind! You go again.");
     }
 
+    //LOSS
     else if(yourMove.equals("rock")) && (compMove.equals("paper"))
     {
         System.out.println("Eat paper loser! Another go? Pick first!");
@@ -20,15 +22,16 @@ class Check
         System.out.println("ERROR: COMPLETELY DEMOLISHED. TRY AGAIN.");
     }
 
-    if else(yourMove.equals("rock")) && (compMove.equals("scissors"))
+    //WIN
+    else if(yourMove.equals("rock")) && (compMove.equals("scissors"))
     {
         System.out.println("Yo, don't actually break my scissors! Lemme try again! You first.");
     }
-    if else(yourMove.equals("scissors")) && (compMove.equals("paper"))
+    else if(yourMove.equals("scissors")) && (compMove.equals("paper"))
     {
         System.out.println("Hmm... I guess you got lucky. Go again, again!");
     }
-    else (yourMove.equals("paper")) && (compMove.equals("rock"))
+    else if(yourMove.equals("paper")) && (compMove.equals("rock"))
     {
         System.out.println("Ok gimme my rock back, you win you win... Go again!");
     }

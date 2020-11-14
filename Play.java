@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
-import Computer.java;
-
 public class Play
 {
-    Computer compMove;
+    public String yourMove;
+    public String compMove;
     public static void main(String[] args)
     {
         Scanner move = new Scanner(System.in);
