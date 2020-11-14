@@ -7,8 +7,8 @@ public class Constants
 {
     public static class Actions
     {
-        public static int R = 1; //Rock
-        public static int P = 2; //Paper
-        public static int S = 3; //Scissors
+        public static int rock = 1;
+        public static int paper = 2;
+        public static int scissors = 3;
     }
 }
