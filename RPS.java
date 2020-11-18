@@ -5,34 +5,41 @@ public class RPS
 {   
     public static void main(String[] args) throws InterruptedException
     {
+        //creates scanner to recieve user input
         Scanner move = new Scanner(System.in); 
         System.out.println("Let's play some Rock Paper Scissors! You first.\n");
      
 
-
+        //beginning of loop
         while(true)
         {
-            Thread.sleep(3000);            
+            //used delays to keep the flow nice
+            Thread.sleep(3000);
             System.out.print("Ok, What's your move? ('rock', 'paper', 'scissors', or 'leave' to quit!)\n"); 
             
             Thread.sleep(5000);  
             System.out.print("\nYour Move: ");
 
+            //takes user input to be printed in line
             String yourMove = move.nextLine(); 
             
+            //if user input is 'leave' loop will break
             if(yourMove.equals("leave")) 
             {
                 break;
             }
             
-
-
+            //if user input is NOT 'leave' the loop will execute the following
             else
             {
+                //creates random number generator
+                //assigns generated numbers to int randomNum
+                //creates unnassigned String compMove
                 Random rand = new Random();        
                 int randomNum = rand.nextInt(3);
                 String compMove = "";
                 
+                //int randomNum will determine what String will be assinged to compMove
                 if (randomNum == 0)
                 {
                     compMove = "rock";
@@ -46,11 +53,13 @@ public class RPS
                     compMove = "scissors";
                 }
                 
-                Thread.sleep(1000);
+                Thread.sleep(1000);                
                 System.out.println("\nComputer move: " + compMove + "\n");
                 
 
 
+                
+                //statements to determine winner
                 Thread.sleep(3000);
                 //TIE
                 if (yourMove.equals(compMove))
@@ -84,14 +93,12 @@ public class RPS
                 else if ((yourMove.equals("paper")) && (compMove.equals("rock")))
                 {
                     System.out.println("Ok you win you win... Go again!\n");
-                }
-
-                Thread.sleep(3000);  
-            }          
+                } 
+            }         
         }
 
+        //when loop has been broken
         Thread.sleep(1000);
-
         System.out.println("\nThat was fun! Smell ya later! :)");
     }   
 }
