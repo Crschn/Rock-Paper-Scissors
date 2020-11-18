@@ -32,7 +32,7 @@ public class RPS
             //if user inut is NOT 'leave' or remaining options
             if(!yourMove.equals("rock") && !yourMove.equals("paper") && !yourMove.equals("scissors"))
             {
-                System.out.println("That's not even one of the option! Go again");
+                System.out.println("That's not even one of the options! Go again.");
             }
             
             //if user input is NOT 'leave' but is one of remaining options, the loop will execute the following
